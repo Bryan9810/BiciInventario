@@ -16,7 +16,7 @@ export class Tab1Page {
     
     this.barcodeScanner.scan().then(barcodeData => {
       console.log('Barcode data', barcodeData);
-      this.data = barcodeData;
+      this.data = barcodeData.text;
     }).catch(err => {
       console.log('Error', err);
     });

@@ -1,17 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-icon slot="icon-only" name="hammer-outline"></ion-icon>
+        </ion-buttons>
+
+        <ion-title>
+            Reparación
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content>
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col class="ion-justify-content-center ion-align-items-center">
+                <ion-img src="assets/imgs/54114.png"></ion-img>
+                <h1 class="ion-padding-top ion-text-center">Modulo en Desarrollo</h1>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

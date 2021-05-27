@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Spartan';
+    src: url('../../assets/fonts/spartan_300.woff2') format('woff2');
+}
+
+* {
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+}
+
+.labels {
+    font-weight: normal;
+}

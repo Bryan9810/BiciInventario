@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Spartan';
+    src: url('../assets/fonts/spartan_300.woff2') format('woff2');
+}
+
+* {
+    font-family: 'Spartan', sans-serif;
+}
+
+.form {
+    --ion-background-color: #36be41;
+}

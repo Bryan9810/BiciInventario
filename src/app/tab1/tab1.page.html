@@ -1,7 +1,11 @@
-<ion-header [translucent]="true">
+<ion-header no-border>
     <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-icon slot="icon-only" name="scan-circle-outline"></ion-icon>
+        </ion-buttons>
+
         <ion-title>
-            Scanner
+            Ingresar Elemento
         </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -12,49 +16,52 @@
 
         <ion-row>
             <ion-col>
-                <ion-button type="submit" color="danger" shape="round" (click)="newScanner()">
-                    Scanner
+
+                <ion-button type="submit " color="danger" expand="block" shape="round " size="default" fill="outline" (click)="newScanner()">
+
+                    <ion-icon slot="icon-only" name="phone-landscape-outline"></ion-icon>
+                    <ion-label class="ion-padding-start">Scanner</ion-label>
+
+                </ion-button>
+
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-padding-top">
+            <ion-col>
+
+                <ion-list>
+
+                    <ion-item>
+                        <ion-input class="labels " name="nombre " placeholder="Nombre del elemento " required></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-input class="labels " name="numero " [(ngModel)]='data' placeholder="Numero del elemento " disabled required></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-textarea class="labels " name="description " placeholder="Descripción del elemento " required></ion-textarea>
+                    </ion-item>
+
+                </ion-list>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-button type="submit " color="tertiary " expand="block" fill="clear">
+
+
+                    <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+                    <ion-label class="ion-padding-start">Enviar</ion-label>
+
                 </ion-button>
             </ion-col>
         </ion-row>
 
-        <form>
 
 
-            <ion-row>
-                <ion-col>
-
-                    <ion-list>
-
-                        <ion-item>
-                            <ion-label>Nombre del elemento</ion-label>
-                            <ion-input name="nombre" type="text" required></ion-input>
-                        </ion-item>
-
-                        <ion-item>
-                            <ion-label>Numero del elemento</ion-label>
-                            <ion-input name="numero" type="text" [(ngModel)]='data.text' disabled required></ion-input>
-                        </ion-item>
-
-                        <ion-item>
-                            <ion-label>Description</ion-label>
-                            <ion-textarea name="description" required></ion-textarea>
-                        </ion-item>
-
-                    </ion-list>
-                </ion-col>
-            </ion-row>
-
-            <ion-row>
-                <ion-col>
-                    <ion-button type="submit" color="tertiary" shape="round" expand="block">
-                        Enviar
-                    </ion-button>
-                </ion-col>
-            </ion-row>
-
-
-        </form>
 
     </ion-grid>
 
